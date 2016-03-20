@@ -16,6 +16,7 @@ defmodule Kyodai.Router do
   scope "/", Kyodai do
     pipe_through :browser # Use the default browser stack
 
+    resources "/users", UserController, only: [:index, :show, :new, :create]
     get "/", PageController, :index
   end
 

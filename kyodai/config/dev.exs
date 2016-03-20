@@ -37,6 +37,6 @@ config :kyodai, Kyodai.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "kyodai_dev",
+  database: "kyodai_db",
   hostname: "localhost",
   pool_size: 10
