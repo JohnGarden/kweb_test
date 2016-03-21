@@ -3,7 +3,7 @@ defmodule Kyodai.UserController do
 	alias Kyodai.User
 	alias Kyodai.Repo
 
-	plug :authenticate when action in [:index, :show]
+	plug :authenticate_user when action in [:index, :show]
 
 
 	def index(conn, _params) do

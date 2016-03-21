@@ -31,11 +31,13 @@ defmodule Kyodai.Web do
       use Phoenix.Controller
 
       alias Kyodai.Repo
+      alias Kyodai.User
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
       import Kyodai.Router.Helpers
       import Kyodai.Gettext
+      import Kyodai.Auth, only: [authenticate_user: 2]
     end
   end
 
@@ -58,6 +60,8 @@ defmodule Kyodai.Web do
   def router do
     quote do
       use Phoenix.Router
+
+      import Kyodai.Auth, only: [authenticate_user: 2]
     end
   end
 
